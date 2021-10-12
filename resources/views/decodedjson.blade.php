@@ -43,7 +43,6 @@
         @foreach($pizza as $pizza)
             {{$pizza->name}}
         @endforeach
-      <?php  dd($posts); ?>
 
 </div>
 </body>

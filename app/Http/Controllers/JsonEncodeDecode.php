@@ -20,7 +20,9 @@ class JsonEncodeDecode extends Controller
     public function encode()
     {
 
-        $posts = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
+        $data = file_get_contents("../public/local_data.json");
+        $posts = json_decode($data, true);
+//        $posts = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
         $pizza = Pizza::all();
         return view('decodedjson', ['pizza'=>$pizza,'posts'=>$posts]);
     }
