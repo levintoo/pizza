@@ -41,7 +41,7 @@
                 <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
             @endif
             <div>        <a class="btn btn-primary" href="create" >New Pizza</a></div>
-                <div class="float-end">        <a class="btn btn-primary" href="{{ route('json') }}" >Encode all to Json</a></div>
+                <div class="float-end">        <a class="btn btn-primary" href="{{ route('json') }}" >Json</a></div>
 
                 <table class="table">
                     <thead>

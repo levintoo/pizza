@@ -39,10 +39,28 @@
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <span><a class="btn btn-primary" href="{{ route('json.decode') }}" >This is the decoded page</a></span>
+        <span><a class="btn btn-primary" href="/" >Home</a></span>
     </div>
-        @foreach($pizza as $pizza)
-            {{$pizza->name}}
+
+        <br>
+        {{$posts['id']}}
+        {{$posts['type']}}
+        {{$posts['name']}}
+        {{$posts['ppu']}}
+
+        <div><u>Batters Loop</u></div>
+        @foreach($posts['batters']['batter'] as $batter)
+            {{$batter['id']}}  :
+            {{$batter['type']}} <br>
         @endforeach
+
+        <div ><u>topping loop</u></div>
+        @foreach($posts['topping'] as $topping)
+            {{$topping['id']}}  :
+            {{$topping['type']}} <br>
+        @endforeach
+
+        <?php  dd($posts); ?>
 
 </div>
 </body>
